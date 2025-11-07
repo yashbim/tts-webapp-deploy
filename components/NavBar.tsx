@@ -18,9 +18,9 @@ const NavBar = () => {
           <Image
             src="/main_logo.png"
             alt="TOTAL TEXTILE SOLUTION"
-            width={289} // adjust as needed
+            width={289}
             height={40}
-            className="object-contain border-2 border-BLACK rounded-md "
+            className="object-contain border-2 border-black rounded-md"
             priority
           />
         </Link>
@@ -31,9 +31,12 @@ const NavBar = () => {
             <Link
               key={link.name}
               href={link.path}
-              className="hover:text-blue-200 transition"
+              className="relative group transition"
             >
-              {link.name}
+              <span>{link.name}</span>
+              <span
+                className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"
+              ></span>
             </Link>
           ))}
         </div>
