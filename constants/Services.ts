@@ -3,6 +3,7 @@ export interface Services {
   subtitle?: string;
   image: string;
   description: string;
+  features?: string[]; // <--- Added this line to fix the build error
 }
 
 export const SERVICES: Services[] = [
@@ -11,6 +12,8 @@ export const SERVICES: Services[] = [
     subtitle: "Nylon, polyester, Cotton & any blends",
     image: "/services/fabric_dyeing.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ipsum arcu, euismod commodo aliquet quis, commodo vel lorem. Nulla iaculis risus pulvinar odio auctor dapibus. Suspendisse potenti. Nullam in mi nec quam pulvinar varius",
+    // Example of how to add features later:
+    // features: ["Color matching", "Eco-friendly dyes", "Fast turnaround"], 
   },
   {
     title: "Washing & drying",
